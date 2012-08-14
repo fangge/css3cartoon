@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <title>CSS3comic</title>
+    <link rel="stylesheet" type="text/css" href="cartoon.css">
+</head>
+<body>
+<h1>Introduction</h1>
+<p>This is a cartoon which inspired from <a href="http://lizclimo.tumblr.com/" title="Liz's blog">Liz</a>'s comic. They just cheer me up when I enjoy all her comic.
+    So I decide to change one of it to the jquery cartoon. Hope u like it. Only available for chrome, firefox , safri and ie10</p>
+
+<div class="canvas">
+    <div class="scene">
+        <div class="hedgehog"></div>
+        <div class="hedgehog2"></div>
+        <div class="hedgehog2cool"></div>
+        <div class="dialog"></div>
+        <div class="line"></div>
+        <div class="hedgehog_move"></div>
+        <div class="hedgehog2_move"></div>
+		<div class="keyboard"></div>
+    </div>
+</div>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jQueryRotateCompressed.2.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".hedgehog2").delay(1500).fadeOut(1000);
+            $(".hedgehog2cool").delay(2000).fadeIn(1000);
+            $(".dialog").delay(3000).fadeIn(1000).delay(1000).fadeOut(1000);
+            $(".hedgehog2cool").delay(3000).fadeOut(1000);
+            $(".hedgehog2_move").delay(6500).fadeIn(1000);
+            $(".hedgehog").delay(7500).fadeOut(1000);
+            $(".hedgehog_move").delay(8000).fadeIn(1000);
+            $(".line").delay(6000).fadeIn(1000);
+			$(".keyboard").delay(9000).fadeIn(1000);
+            var hedgehog = parseInt($(".hedgehog_move").css("left"));
+            var hedgehog2 = parseInt($(".hedgehog2_move").css("left"));
+            $(document).keyup(function(event){
+               var key = event.keyCode;
+                switch(key){
+                    case 37:
+                        $(".hedgehog_move,.hedgehog2_move").rotate(-300);
+                        $(".hedgehog_move").css("left",hedgehog-300+'px');
+                        $(".hedgehog2_move").css("left",hedgehog2-300+'px');
+                        break;
+                    case 39:
+                        $(".hedgehog_move,.hedgehog2_move").rotate(300);
+                        $(".hedgehog_move").css("left",hedgehog*1+300*1+'px');
+                        $(".hedgehog2_move").css("left",hedgehog2*1+300*1+'px');
+                        break;
+                    return false;
+                }
+				if(key == 37){
+					$(".keyboard").css('background-position','-146px 0');
+				}else if(key == 39){
+					$(".keyboard").css('background-position','-292px 0');
+				}else{
+					$(".keyboard").css('background-position','0');
+				}
+            });
+
+        })
+    </script>
+</body>
+</html>
