@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 @font-face{
     font-family: 'MODEO';
-    src: url('MODEO.TTF') format('truetype');
+    src: url('modeo.ttf') format('truetype');
 }
 @font-face{
     font-family: 'modern';
