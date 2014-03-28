@@ -1,9 +1,5 @@
 ﻿@charset "utf-8";
 @font-face{
-    font-family: 'MODEO';
-    src: url('modeo.ttf') format('truetype');
-}
-@font-face{
     font-family: 'modern';
     src: url('modern.ttf') format('truetype');
 }
@@ -12,7 +8,7 @@ body{
     width: 700px;
 }
 h1{
-    font-family: 'MODEO',sans-serif;
+    font-family: 'modern';
     font-size: 80px;
     font-weight: lighter;
     text-align: center;
