@@ -1,0 +1,129 @@
+﻿@charset "utf-8";
+@font-face{
+    font-family: 'MODEO';
+    src: url('MODEO.TTF') format('truetype');
+}
+@font-face{
+    font-family: 'modern';
+    src: url('modern.ttf') format('truetype');
+}
+body{
+    margin: 0 auto;
+    width: 700px;
+}
+h1{
+    font-family: 'MODEO',sans-serif;
+    font-size: 80px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 10px 0 0;
+    color:#493c33
+}
+p{
+    font-family: 'modern';
+    font-size: 23px;
+    margin: 0;
+    text-indent: 80px;
+    color: #d0bcb1;
+    font-weight: lighter;
+    line-height: 32px;
+}
+a{
+    text-decoration: none;
+    color:#000
+}
+.canvas{
+    height: 474px;
+    width: 636px;
+    background: url("images/canvas.png") no-repeat;
+    margin: 15px auto;
+    position: relative;
+}
+.hedgehog_move,.hedgehog2_move{
+    transition:2s;
+    -webkit-transition:2s;
+    -moz-transition:2s;
+    -o-transition:2s;
+}
+.canvas .scene,.hedgehog,.hedgehog2,.hedgehog2cool,.dialog,.hedgehog2cool,.line,.hedgehog_move,.hedgehog2_move,.keyboard{
+    position: absolute;
+    z-index: 99;
+}
+.line{
+    z-index: 80;
+}
+.scene{
+    height: 372px;
+    width: 589px;
+    overflow: hidden;
+    left: 24px;
+}
+.canvas .hedgehog,.hedgehog2{
+    height:172px;
+    width: 160px;
+    background: url("images/hedgehog.png") no-repeat;
+}
+.hedgehog{
+    top:182px;
+    left:107px;
+}
+.canvas .hedgehog2 {
+    -moz-transform:scaleX(-1);
+    -webkit-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform:scaleX(-1);
+    /*IE*/
+    filter:FlipH;
+}
+.hedgehog2{
+    top:182px;
+    left:330px;
+}
+.hedgehog2cool{
+    height:175px;
+    width:165px;
+    background: url("images/hedgehog_2.png") no-repeat;
+    top:182px;
+    left:330px;
+    display: none;
+}
+.dialog{
+    width: 98px;
+    height: 60px;
+    background: url("images/letsroll.png") no-repeat;
+    top:110px;
+    left:264px;
+    display: none;
+}
+.line{
+    width: 589px;
+    height: 10px;
+    background: url("images/line.png") no-repeat;
+    top:339px;
+    left: 3px;
+    display: none;
+}
+.hedgehog_move{
+    width: 152px;
+    height: 158px;
+    background: url("images/hedgehog_move.png") no-repeat;
+    top:189px;
+    left:107px;
+    display: none;
+}
+.hedgehog2_move{
+    width: 156px;
+    height: 154px;
+    background: url("images/hedgehog2_move.png") no-repeat;
+    top:191px;
+    left:330px;
+    display: none;
+}
+.keyboard{
+	width:146px;
+	height:97px;
+	background:url("images/keyboard.gif") no-repeat;
+	top:39px;
+	left:227px;
+	display:none;
+}
